@@ -1,0 +1,11 @@
+.footer_content  {
+    display: flex;
+
+    flex-direction: row;
+
+    margin-top: 20px;
+}
+
+.footer_content h2 {
+     color: rgb(139, 138, 138);
+}
