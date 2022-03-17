@@ -1,18 +1,19 @@
 import styles from '../styles/EOM.module.css'
 import {Toolbar} from '../components/toolbar'
 
-export const EOM = ({employee}) => {
+export const EOM = ({user}) => {
   
     return (
         <div className='page-container'> 
+        
          <Toolbar/>
         <div className={styles.main}>
-            <h1>Empregado do mês</h1>
+            <h1>{"Rodrigo Lima"}</h1>
         <div className={styles.employeeOfMonth}>
-        <h3>{employee.name}</h3>
-            <h6>{employee.position}</h6>
-            <img src={employee.image}/>
-            <p>{employee.description}</p>
+        {/* <h3>{"Rodrigo Lima"}</h3> */}
+            <h6>{"Programador de sistemas"}</h6>
+            <img src={"https://avatars.githubusercontent.com/u/44089765?v=4"}/>
+            <p>{}</p>
                  
         </div>
        </div>
@@ -24,7 +25,7 @@ export const EOM = ({employee}) => {
 
 export const getServerSideProps = async () => {
     const apiResponse = await fetch(
-      'https://my-json-server.typicode.com/portexe/next-news/employeeOfTheMonth',
+      'https://api.github.com/rniochy/',
     );
     const employee = await apiResponse.json();
   
